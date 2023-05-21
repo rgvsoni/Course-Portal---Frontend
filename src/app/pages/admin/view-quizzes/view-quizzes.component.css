@@ -1,0 +1,12 @@
+.example-header-image {
+  background-image: url("../../../../assets/exam.png");
+  background-size: cover;
+}
+.header1 {
+  display: flex;
+}
+
+.button{
+  right: 2rem;
+}
+

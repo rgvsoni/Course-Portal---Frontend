@@ -1,0 +1,32 @@
+.truncate {
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.example-header-image {
+    background-image: url("/assets/exam1.png");
+    background-size: cover;
+}
+
+.title {
+    position: relative;
+    left: 0rem;
+}
+.question {
+    position: absolute;
+    color: rgb(250, 96, 122);
+    right: 2rem;
+}
+
+.marks {
+    position: absolute;
+    color: rgb(250, 96, 122);
+    right: 8rem;
+}
+
+mat-card:hover {
+    background-color: rgb(244, 243, 243);
+}

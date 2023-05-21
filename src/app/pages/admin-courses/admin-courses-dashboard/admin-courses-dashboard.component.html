@@ -1,0 +1,16 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <!-- container fluid class provides full width container and container class provides fixed width container -->
+    <div class="row">
+      <!-- Remember that grid columns should add up to twelve for a row. More than that, columns will stack no matter the viewport. -->
+      <div class="col-md-2">
+        <!-- md is for desktop sm is for tablets -->
+        <app-admin-courses-sidebar></app-admin-courses-sidebar>
+      </div>
+
+      <div class="col-md-10">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

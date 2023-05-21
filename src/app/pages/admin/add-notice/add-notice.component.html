@@ -1,0 +1,35 @@
+<mat-card class="mt20">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form (ngSubmit)="addNotice()">
+                    <mat-form-field class="w100" appearance="fill">
+                        <mat-label>Enter Title</mat-label>
+
+                        <input type="text" matInput autofocus required name="title" [(ngModel)]="noticeData.title">
+                    </mat-form-field>
+                    <mat-form-field class="w100" appearance="fill">
+                        <mat-label>Enter announcement</mat-label>
+                        <textarea [(ngModel)]="noticeData.content" type="text" name="description"
+                            placeholder="Enter here" matInput rows="5">
+                        </textarea>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="mt20 w100">
+                        <mat-label>Course</mat-label>
+                        <mat-select name="category" [(ngModel)]="noticeData.category.cid">
+                            <mat-option *ngFor="let c of categories" [value]="c.cid">
+                                {{ c.title }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <div class="container text-center">
+                        <button mat-raised-button color="accent" type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</mat-card>

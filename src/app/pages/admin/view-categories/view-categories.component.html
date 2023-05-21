@@ -1,0 +1,30 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6" *ngFor="let c of categories">
+        <mat-card class="mt20" type="button" (click)="GotoAdminCourses(c.cid)" style="cursor: pointer">
+          <mat-card-header>
+            <mat-card-title>
+              {{ c.title }}
+            </mat-card-title>
+            <mat-card-subtitle style="font-size: 18px">
+              {{ c.description }}
+            </mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="container text-center mt20">
+  <button routerLink="/admin/add-category" mat-raised-button color="accent">
+    Add New Course
+  </button>
+</div>

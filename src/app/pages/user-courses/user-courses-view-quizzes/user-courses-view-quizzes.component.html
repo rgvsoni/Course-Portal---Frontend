@@ -1,0 +1,55 @@
+<div *ngIf="quizzes.length == 0">
+    <mat-card>
+        <mat-card-content>
+            <h1>No quizzes in this course</h1>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<mat-card class="mt20" style="cursor:pointer" type="button" [routerLink]="'/user-courses/' + catId + '/instructions/' + q.qId" [queryParams]="{cid: catId}" *ngFor="let q of quizzes">
+    <div style="display:flex">
+        <mat-card-title class="title">{{ q.title }}</mat-card-title>
+        <span mat-item class="question">Questions :{{ q.numberOfQuestions }}</span>
+        <span mat-item class="marks">M.M :{{ q.maxMarks }}</span>
+    </div>
+
+</mat-card>
+
+
+
+<!-- <div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <h1 class="mt20">Available Quizzes</h1>
+        <div class="row mt20" *ngIf="quizzes">
+            <div class="col-md-6" *ngFor="let q of quizzes">
+                <mat-card class="mb20">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>
+                            {{ q.title }}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{ q.category.title }}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p class="truncate">{{ q.description }}</p>
+                    </mat-card-content>
+                    <mat-card-action>
+                       
+                        <button mat-button color="accent" [routerLink]="'/user-courses/' + catId + '/instructions/' + q.qId" [queryParams]="{cid: catId}"
+                            class="ml10">
+                            Start
+                        </button>
+                        <button mat-button color="accent">
+                            Questions :{{ q.numberOfQuestions }}
+                        </button>
+                        <button mat-button color="accent">M.M :{{ q.maxMarks }}</button>
+                    </mat-card-action>
+                </mat-card>
+            </div>
+
+            
+        </div>
+    </div>
+</div> -->

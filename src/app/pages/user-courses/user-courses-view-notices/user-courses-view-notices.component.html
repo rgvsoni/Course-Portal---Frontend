@@ -1,0 +1,14 @@
+
+<mat-expansion-panel  class="mt20" *ngFor="let notice of notices">
+    <mat-expansion-panel-header>
+        <mat-panel-title style="font-size: 20px">
+            {{ notice.title }}
+        </mat-panel-title>
+        <mat-panel-description style="font-size: 18px" class="date">
+            {{ notice.addedDate | date}}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p style="font-size: 18px">{{ notice.content }}</p>
+
+</mat-expansion-panel>
+

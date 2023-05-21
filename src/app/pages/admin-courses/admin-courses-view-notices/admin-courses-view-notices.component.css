@@ -1,0 +1,16 @@
+.header1 {
+    display: flex;
+}
+
+.date {
+    position: fixed;
+    right: 4rem;
+}
+
+.button {
+    position: fixed;
+    right: 4rem;
+}
+
+
+
